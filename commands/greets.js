@@ -4,7 +4,7 @@ module.exports = {
     data: new SlashCommandBuilder()
 		.setName('greet')
 		.setDescription('Greets!')
-        .addStringOption(option =>
+        /*.addStringOption(option =>
             option
             .setName('language')
             .setDescription('言語を指定します')
@@ -13,8 +13,8 @@ module.exports = {
                 {name:'Japanese',value:'ja'},
                 {name:'English',value:'en'}
             )
-        ),
-    async execute(interaction) {
+        )*/,
+    async execute(client, interaction) {
         /*if (interaction.options.getString('language') === 'Japanese') {*/
 			await interaction.reply({content:'こんにちは！'});
         /*} else /*{

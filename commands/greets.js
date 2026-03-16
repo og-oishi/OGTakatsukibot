@@ -6,11 +6,14 @@ module.exports = {
 		.setDescription('Greets!')
         .addStringOption(option =>
             option
+            .setType('STRING')
             .setName('language')
             .setDescription('言語を指定します')
             .setRequired(true)
-            .addChoices({name:'Japanese',value:'ja'},
-            {name:'English',value:'en'})
+            .addChoices(
+                {name:'Japanese',value:'ja'},
+                {name:'English',value:'en'}
+            )
         ),
     async execute(interaction) {
         /*if (interaction.options.getString('language') === 'Japanese') {*/

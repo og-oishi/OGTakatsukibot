@@ -1,22 +1,19 @@
 const { SlashCommandBuilder } = require('discord.js');
 
 module.exports = {
-    data: {
-        name: "greet",
-        description: "Greets!",
-        options: [{
-            type: "STRING",
-            name: "language",
-            description: "Choice your language",
-            required: true,
-            choices: [
-                { name: "Japanese", value: "japanese" },
-                { name: "English", value: "english" },
-            ]
-        }],
-    },
+    data: new SlashCommandBuilder()
+		.setName('greet')
+		.setDescription('Greets!')
+        .addStringOption(option =>
+            option
+            .setName('language')
+            .setDescription('言語を指定します')
+            .setResuired(true)
+            .addChoice('Japanese','ja')
+            .addChoice('Japanese','ja')
+        ),
     async execute(interaction) {
-        if (interaction.options.getString('language') === 'japanese') {
+        if (interaction.options.getString('language') === 'Japanese') {
 			await interaction.reply('こんにちは！');
         } else {
             await interaction.reply('Hello!');

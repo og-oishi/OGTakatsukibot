@@ -10,7 +10,7 @@ module.exports = {
             .setDescription('言語を指定します')
             .setRequired(true)
             .addChoice('Japanese','ja')
-            .addChoice('Japanese','ja')
+            .addChoice('English','en')
         ),
     async execute(interaction) {
         if (interaction.options.getString('language') === 'Japanese') {
@@ -18,5 +18,5 @@ module.exports = {
         } else {
             await interaction.reply('Hello!');
         }
-    }
-}
+    },
+};

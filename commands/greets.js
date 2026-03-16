@@ -6,7 +6,6 @@ module.exports = {
 		.setDescription('Greets!')
         .addStringOption(option =>
             option
-            .setType('STRING')
             .setName('language')
             .setDescription('言語を指定します')
             .setRequired(true)

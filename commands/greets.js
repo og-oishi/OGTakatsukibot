@@ -8,7 +8,7 @@ module.exports = {
             option
             .setName('language')
             .setDescription('言語を指定します')
-            .setResuired(true)
+            .setRequired(true)
             .addChoice('Japanese','ja')
             .addChoice('Japanese','ja')
         ),

@@ -16,7 +16,7 @@ module.exports = {
         ),
     async execute(interaction) {
         /*if (interaction.options.getString('language') === 'Japanese') {*/
-			await interaction.reply('こんにちは！');
+			await interaction.reply({content:'こんにちは！'});
         /*} else /*{
             await interaction.reply('Hello!');
         }*/

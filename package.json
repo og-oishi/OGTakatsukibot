@@ -1,5 +1,5 @@
 {
-  "name": "discord-bot-template",
+  "name": "ogtakatsukibot",
   "scripts": {
     "start": "node server.js"
   },

@@ -3,10 +3,10 @@ const { Events } = require('discord.js');
 module.exports = {
 	name: Events.MessageCreate,
 	once: false,
-	async execute(message){
+	execute(message){
 		if(message.author.bot) return;
 		if(message.content.startsWith('おはよ')){
-			await message.channel.send('おはようございます');
+			message.channel.send('おはようございます');
 		}
 	}
 };

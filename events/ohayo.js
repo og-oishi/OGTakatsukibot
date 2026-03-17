@@ -1,5 +1,17 @@
 const { Events } = require('discord.js');
 
+module.exports = {
+	name: Events.MessageCreate,
+	once: false,
+	async execute(message){
+		if(message.author.bot) return;
+		if(message.content.startsWith('おはよ')){
+			await message.channel.send('おはようございます');
+		}
+	}
+};
+
+/*
 //MessageCreateEvent処理(サーバーにメッセージが送信された時の処理)
 client.on(Events.MessageCreate, async message => { //messageに作られたmessageとかいろいろ入る
     if (message.author.bot) {//メッセージの送信者がBOTなら
@@ -9,3 +21,4 @@ client.on(Events.MessageCreate, async message => { //messageに作られたmessa
         await message.channel.send("おはよ"); //botがmessage.channel(メッセージが送信されたチャンネル)に「おはよ」と送信する
     }
 });
+*/

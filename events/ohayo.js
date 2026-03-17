@@ -1,6 +1,6 @@
 const { Events } = require('discord.js');
 
-module.exports = {
+/*module.exports = {
 	name: Events.MessageCreate,
 	once: false,
 	execute(message){
@@ -9,7 +9,7 @@ module.exports = {
 			message.channel.send('おはようございます');
 		}
 	}
-};
+};*/
 
 /*
 //MessageCreateEvent処理(サーバーにメッセージが送信された時の処理)
